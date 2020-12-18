@@ -11,14 +11,13 @@ class _QuizState extends State<QuizPage> {
 
   int questionNumber = 0;
   int score = 0;
-  int totalAmountQuestions = 1;
 
   Widget build(BuildContext context) {
 
     if(questionNumber == totalAmountQuestions) {
       return Result();
     } else {
-      return Question();
+      return Question(questionNumber, score);
     }
   }
 }
